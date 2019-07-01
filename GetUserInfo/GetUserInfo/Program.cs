@@ -57,7 +57,7 @@ namespace GetUserInfo
                 {
                     Console.WriteLine("Awesome! A pet is always nice to have around.");
                     Console.WriteLine("So your name is " + UserFirstName + " " + UserLastName + ",\nYour favorite number is " + FavNumber + ",\n" +
-                    "and lastly you have " + NumOfPets + " pet, right?");
+                    "and lastly you have " + NumOfPets + " pet!");
                     Console.WriteLine("Well met friend! It was nice getting to know you! Have a good day:)");
                 }
                 else if (NumberOfPets >= 2)
@@ -65,7 +65,7 @@ namespace GetUserInfo
 
                     Console.WriteLine("Sweet! Pets are always nice to have around.");
                     Console.WriteLine("So your name is " + UserFirstName + " " + UserLastName + ",\nYour favorite number is " + FavNumber + ",\n" +
-                "and lastly you have " + NumOfPets + " pets, right?");
+                "and lastly you have " + NumOfPets + " pets!");
                     Console.WriteLine("Well met friend! It was nice getting to know you! Have a good day:)");
                 }
             }
@@ -74,7 +74,7 @@ namespace GetUserInfo
             {
                     Console.WriteLine("That's a bummer. Pets are amazing companions.\nYou should think about getting one!\n");
                     Console.WriteLine("So your name is " + UserFirstName + " " + UserLastName + ",\nYour favorite number is " + FavNumber + ",\n" +
-                "and lastly you have no pets, right?");
+                "and lastly you have no pets.");
                     Console.WriteLine("Well met friend! It was nice getting to know you! Have a good day:)");
             }
 
