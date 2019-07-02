@@ -40,44 +40,40 @@ namespace GetUserInfo
 
             string HasPets = askQuestion("Do you have any pets? (y/n)");
 
-            string NumOfPets;
-            bool NumOfPetsCheck;
-            int NumberOfPets;
-
             if (HasPets == "y")
             {
-                do
-                {
-                    NumOfPets = askQuestion("How many pets do you have?");
-                    NumOfPetsCheck = int.TryParse(NumOfPets, out NumberOfPets);
-                } while (NumOfPetsCheck == false);
+                Console.WriteLine("How many pets do you have?");
+                string response = Console.ReadLine();
+                int numberOfPets = int.Parse(response);
 
+                string[] petNames = new string[numberOfPets];
 
-                if (NumberOfPets == 1)
+                for (int i = 0; i < numberOfPets; i++)
                 {
-                    Console.WriteLine("Awesome! A pet is always nice to have around.");
-                    Console.WriteLine("So your name is " + UserFirstName + " " + UserLastName + ",\nYour favorite number is " + FavNumber + ",\n" +
-                    "and lastly you have " + NumOfPets + " pet!");
-                    Console.WriteLine("Well met friend! It was nice getting to know you! Have a good day:)");
+                    Console.WriteLine("What is the name of one of your pets?");
+                    string petName = Console.ReadLine();
+                    petNames[i] = petName;
                 }
-                else if (NumberOfPets >= 2)
-                {
 
-                    Console.WriteLine("Sweet! Pets are always nice to have around.");
-                    Console.WriteLine("So your name is " + UserFirstName + " " + UserLastName + ",\nYour favorite number is " + FavNumber + ",\n" +
-                "and lastly you have " + NumOfPets + " pets!");
-                    Console.WriteLine("Well met friend! It was nice getting to know you! Have a good day:)");
+                Console.WriteLine("\nSo your name is " + UserFirstName + " " + UserLastName + ",\nYour favorite number is " + FavNumber + ",\n" +
+                "you have " + response + " pet(s) named");
+
+                foreach (var petName in petNames)
+                {
+                    Console.WriteLine(petName);
                 }
+
+                Console.WriteLine("\nWell met friend! It was nice getting to know you! Have a good day:)");
+
             }
 
-            else if (HasPets == "n")
+            else
             {
-                    Console.WriteLine("That's a bummer. Pets are amazing companions.\nYou should think about getting one!\n");
-                    Console.WriteLine("So your name is " + UserFirstName + " " + UserLastName + ",\nYour favorite number is " + FavNumber + ",\n" +
+                Console.WriteLine("That's a bummer. Pets are amazing companions.\nYou should think about getting one!\n");
+                Console.WriteLine("So your name is " + UserFirstName + " " + UserLastName + ",\nYour favorite number is " + FavNumber + ",\n" +
                 "and lastly you have no pets.");
-                    Console.WriteLine("Well met friend! It was nice getting to know you! Have a good day:)");
+                Console.WriteLine("Well met friend! It was nice getting to know you! Have a good day:)");
             }
-
 
         }
     }
